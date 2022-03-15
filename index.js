@@ -10,16 +10,16 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.use(function (req, res, next) {
-    console.log('Hello');
-    console.log(req.query);
-    if(req.query.key === '123456'){
-        next();
-    }
-    else {
-        res.send("Invalid API key");
-    }
-});
+// app.use(function (req, res, next) {
+//     console.log('Hello');
+//     console.log(req.query);
+//     if(req.query.key === '123456'){
+//         next();
+//     }
+//     else {
+//         res.send("Invalid API key");
+//     }
+// });
 
 
 app.get('/get', function (req, res) {
